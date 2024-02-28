@@ -20,9 +20,12 @@ function ProfileMenu() {
     const { setChoice } = useContext(ChoiceContext)
     const { mutate, isSuccess } = useMutation(Logout)
     const goto = useNavigate()
+
+    
     useEffect(() => {
         if (isSuccess) {
             setUser(undefined)
+            localStorage.removeItem('accessToken')
             setChoice({ type: UserChoiceActions.close_user })
             setMenu({ type: UserMenuActions.close_user_menu, anchorEl: null })
             goto(paths.login)
