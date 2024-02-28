@@ -63,6 +63,7 @@ function LoginForm() {
     if (isSuccess) {
       setUser(data.data.user)
       setChoice({ type: UserChoiceActions.close_user })
+      localStorage.setItem("accessToken", data.data.token)
     }
   }, [setUser, goto, setChoice, isSuccess, data])
 
