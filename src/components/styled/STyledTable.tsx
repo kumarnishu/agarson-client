@@ -25,7 +25,6 @@ export const STableCell = styled.td`
   padding-left:3px;
   padding-inline: 5px;
   border: 1px solid #ddd;
-  font-size: 11px;
   white-space: nowrap;
   text-transform: capitalize;
   overflow: hidden;
@@ -34,7 +33,6 @@ export const STableCell = styled.td`
 export const STableHeadCell = styled.th`
   position:sticky;
   z-index: 1;
-  font-size: 9px;
   padding-left:3px;
   padding-inline: 5px;
   text-align: left;
